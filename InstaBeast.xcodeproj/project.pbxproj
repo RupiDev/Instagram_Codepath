@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D219A1371C7D284800A99FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D219A1361C7D284800A99FCD /* AppDelegate.swift */; };
+		D219A1391C7D284900A99FCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D219A1381C7D284900A99FCD /* ViewController.swift */; };
+		D219A13C1C7D284900A99FCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D219A13A1C7D284900A99FCD /* Main.storyboard */; };
+		D219A13E1C7D284900A99FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D219A13D1C7D284900A99FCD /* Assets.xcassets */; };
+		D219A1411C7D284900A99FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D219A13F1C7D284900A99FCD /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D219A1331C7D284800A99FCD /* InstaBeast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBeast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D219A1361C7D284800A99FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D219A1381C7D284900A99FCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D219A13B1C7D284900A99FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D219A13D1C7D284900A99FCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D219A1401C7D284900A99FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D219A1421C7D284900A99FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D219A1301C7D284800A99FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D219A12A1C7D284800A99FCD = {
+			isa = PBXGroup;
+			children = (
+				D219A1351C7D284800A99FCD /* InstaBeast */,
+				D219A1341C7D284800A99FCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D219A1341C7D284800A99FCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D219A1331C7D284800A99FCD /* InstaBeast.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D219A1351C7D284800A99FCD /* InstaBeast */ = {
+			isa = PBXGroup;
+			children = (
+				D219A1361C7D284800A99FCD /* AppDelegate.swift */,
+				D219A1381C7D284900A99FCD /* ViewController.swift */,
+				D219A13A1C7D284900A99FCD /* Main.storyboard */,
+				D219A13D1C7D284900A99FCD /* Assets.xcassets */,
+				D219A13F1C7D284900A99FCD /* LaunchScreen.storyboard */,
+				D219A1421C7D284900A99FCD /* Info.plist */,
+			);
+			path = InstaBeast;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D219A1321C7D284800A99FCD /* InstaBeast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D219A1451C7D284900A99FCD /* Build configuration list for PBXNativeTarget "InstaBeast" */;
+			buildPhases = (
+				D219A12F1C7D284800A99FCD /* Sources */,
+				D219A1301C7D284800A99FCD /* Frameworks */,
+				D219A1311C7D284800A99FCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaBeast;
+			productName = InstaBeast;
+			productReference = D219A1331C7D284800A99FCD /* InstaBeast.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D219A12B1C7D284800A99FCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Rupin Bhalla";
+				TargetAttributes = {
+					D219A1321C7D284800A99FCD = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U8GD76KLP5;
+					};
+				};
+			};
+			buildConfigurationList = D219A12E1C7D284800A99FCD /* Build configuration list for PBXProject "InstaBeast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D219A12A1C7D284800A99FCD;
+			productRefGroup = D219A1341C7D284800A99FCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D219A1321C7D284800A99FCD /* InstaBeast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D219A1311C7D284800A99FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D219A1411C7D284900A99FCD /* LaunchScreen.storyboard in Resources */,
+				D219A13E1C7D284900A99FCD /* Assets.xcassets in Resources */,
+				D219A13C1C7D284900A99FCD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D219A12F1C7D284800A99FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D219A1391C7D284900A99FCD /* ViewController.swift in Sources */,
+				D219A1371C7D284800A99FCD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D219A13A1C7D284900A99FCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D219A13B1C7D284900A99FCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D219A13F1C7D284900A99FCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D219A1401C7D284900A99FCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D219A1431C7D284900A99FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D219A1441C7D284900A99FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D219A1461C7D284900A99FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstaBeast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RupinBhalla.InstaBeast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D219A1471C7D284900A99FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstaBeast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RupinBhalla.InstaBeast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D219A12E1C7D284800A99FCD /* Build configuration list for PBXProject "InstaBeast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D219A1431C7D284900A99FCD /* Debug */,
+				D219A1441C7D284900A99FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D219A1451C7D284900A99FCD /* Build configuration list for PBXNativeTarget "InstaBeast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D219A1461C7D284900A99FCD /* Debug */,
+				D219A1471C7D284900A99FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D219A12B1C7D284800A99FCD /* Project object */;
+}
