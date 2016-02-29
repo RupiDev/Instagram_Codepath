@@ -7,15 +7,40 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "InstaBeastQ"
+                configuration.clientKey = "asd;fljha;dflkjha;ldfj"
+                configuration.server = "https://polar-ravine-93803.herokuapp.com/parse"
+            })
+        )
+        
+        //Parse.setApplicationId("InstaBeastQ", clientKey: "asd;fljha;dflkjha;ldfj")
+        
+        if(PFUser.currentUser() != nil)
+        {
+            let vc = storyboard.instantiateViewControllerWithIdentifier("tabViewController") as UIViewController
+            window?.rootViewController = vc
+            print("Hello")
+        }
+        else
+        {
+            print("Failed to detect current user")
+        }
+        
+        
+
         return true
     }
 
