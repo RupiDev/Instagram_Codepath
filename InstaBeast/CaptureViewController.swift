@@ -43,7 +43,20 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
 
     @IBAction func choosePhotos(sender: UITapGestureRecognizer)
     {
-        // put code for choosing photos
+        // put code for choosing photos        
+        choosingPhotes();
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?)
+    {
+        if event?.subtype == UIEventSubtype.MotionShake
+        {
+            choosingPhotes();
+        }
+    }
+    
+    func choosingPhotes()
+    {
         print("choosing photos")
         let vc = UIImagePickerController()
         vc.delegate = self
@@ -98,11 +111,11 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         
-        //let size = CGSizeMake(50, 50);
-        //picture.image = self.resize(editedImage, newSize: size)
+        let size = CGSizeMake(500, 500);
+        picture.image = self.resize(editedImage, newSize: size)
         
         
-        picture.image = editedImage
+        //picture.image = editedImage
         
         photesButton.setTitle("", forState: UIControlState.Normal)
         self.dismissViewControllerAnimated(true, completion: nil)

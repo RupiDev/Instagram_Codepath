@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import MBProgressHUD
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
@@ -17,6 +18,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        
         
         query();
         
@@ -37,9 +40,27 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     {
         // construct PFQuery
         let query = PFQuery(className: "UserMedia")
-        query.orderByDescending("createdAt")
+        if(choice == 0)
+        {
+            query.orderByDescending("createdAt")
+        }
+        else if(choice == 1)
+        {
+            query.orderByAscending("createdAt")
+        }
+        else
+        {
+            query.orderByDescending("createdAt")
+        }
         query.includeKey("author")
-        query.limit = 20
+        if(postNum1 != nil)
+        {
+            query.limit = postNum1!;
+        }
+        else
+        {
+            query.limit = 20
+        }
         
         // fetch data asynchronously
         query.findObjectsInBackgroundWithBlock { (media: [PFObject]?, error: NSError?) -> Void in
@@ -50,6 +71,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.allInfo = media
                 print(self.allInfo);
                 self.tableView.reloadData();
+                
+                let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                loadingNotification.mode = MBProgressHUDMode.Indeterminate
+                loadingNotification.labelText = "Loading"
+                //To dismiss the ProgressHUD:
+                
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             }
             else
             {

@@ -8,15 +8,30 @@
 
 import UIKit
 import Parse
-
-
+var choice: Int?
+var postNum1: Int?
 class ProfileViewController: UIViewController
 {
     //var user: PFUser?
 
+    @IBOutlet weak var postNum: UILabel!
+    @IBOutlet weak var postsSlider: UISlider!
+    @IBOutlet weak var queryChoiceSegment: UISegmentedControl!
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        // 0 = descending
+        // 1 = ascending
+        var array = [0, 1];
+        choice = array[queryChoiceSegment.selectedSegmentIndex]
+        
+       postNum1 = Int(postsSlider.value)
+        
+       postNum.text = String(Int(postsSlider.value))
+    
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -32,6 +47,12 @@ class ProfileViewController: UIViewController
         PFUser.logOut();
     }
 
+    @IBAction func didChange(sender: AnyObject)
+    {
+        choice = queryChoiceSegment.selectedSegmentIndex
+        postNum1 = Int(postsSlider.value)
+        postNum.text = String(Int(postsSlider.value))
+    }
     /*
     // MARK: - Navigation
 
