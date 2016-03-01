@@ -2,7 +2,7 @@
 
 **Instabeast** is a photo sharing app using Parse as its backend.
 
-Time spent: **14** hours spent in total
+Time spent: **18** hours spent in total
 
 ## User Stories
 
@@ -36,9 +36,18 @@ The following **additional** features are implemented:
   - [X] User can choose the limit of posts he/she wants to see
 - [X] Implemented Motion Shake
   - [X] On the capture section, user can shake phone and camera will pop up
-
-
-
+- [X] Implemented different types of image filtering. Gave the option of many filters
+  - [X] CIBumpDistortion Filtering
+  - [X] CIGaussianBlur Filtering
+  - [X] CIPixellate Filtering
+  - [X] CISepiaTone Filtering
+  - [X] CITwirlDistortion Filtering
+  - [X] CIVignette Filtering
+- [X] Implemented Alert Controllers so the user can choose the many filtering options
+- [X] Implemnted Slider that allows the user to control the amount of filtering for the image
+- [X] Implemened action where user can save the image taken to their own photo library
+  - [X] Used Alert Controllers 
+  
 
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
@@ -50,19 +59,22 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-Link to the GIF
-http://imgur.com/zEy3TYZ
+Link to the GIF:
+
+http://i.giphy.com/3o7abzKV6UTIVQl8Vq.gif
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Forgot to show the motion sensor in the demo, but you can look at my code to see that it is implemented.
 Working with UITapGestureRecognizer was fun and interesting.
 Learned how to implement constraints and difference between holding and tapping.
+Learned how to implement photo filtering and saving images to photo libary.
 
 Also the simulator was being really slow and wasn't loading up the pictures, so I took a video, and
 converted that to a GIF and put it here
+
+Also forgot to log out in the GIF, but I have implemented the log out feature. Check the code for that. 
 
 
 Describe any challenges encountered while building the app.
