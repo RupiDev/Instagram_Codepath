@@ -17,6 +17,7 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var intensity: UISlider!
     
+    var a: Int! 
     
     var context: CIContext!
     var currentFilter: CIFilter!
