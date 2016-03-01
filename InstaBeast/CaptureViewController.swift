@@ -15,9 +15,11 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var photesButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var intensity: UISlider!
     
     
-    
+    var context: CIContext!
+    var currentFilter: CIFilter!
     //var userInfo: UserMedia?
     
     override func viewDidLoad()
@@ -30,7 +32,8 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         lpgr.delegate = self
         self.photesButton.addGestureRecognizer(lpgr)
         
-        
+        context = CIContext(options: nil)
+        currentFilter = CIFilter(name: "CISepiaTone")
 
         // Do any additional setup after loading the view.
     }
@@ -106,7 +109,8 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
         
         let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
@@ -119,6 +123,11 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         
         photesButton.setTitle("", forState: UIControlState.Normal)
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let beginImage = CIImage(image: picture.image!)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        
+        applyProcessing();
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
@@ -149,8 +158,35 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         }
     }
     
+    @IBAction func changeFilter(sender: AnyObject)
+    {
+        
+    }
     
+    
+    @IBAction func savePic(sender: AnyObject)
+    {
+        
+    }
 
+    @IBAction func intensityChanged(sender: AnyObject)
+    {
+        
+        
+        //applyProcessing();
+        
+        applyProcessing();
+    }
+    
+    func applyProcessing()
+    {
+        currentFilter.setValue(intensity.value, forKey: kCIInputImageKey)
+        
+        let cgimg = context.createCGImage(currentFilter.outputImage!, fromRect: currentFilter.outputImage!.extent)
+        let processedImage = UIImage(CGImage: cgimg)
+        
+        picture.image = processedImage;
+    }
     
     // MARK: - Navigation
 

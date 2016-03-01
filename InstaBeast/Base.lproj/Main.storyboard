@@ -27,18 +27,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLF-Nn-OY3">
-                                <rect key="frame" x="65" y="291" width="190" height="43"/>
-                                <state key="normal" title="Sign In" image="instagram_login.png"/>
-                                <connections>
-                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fe3-jV-C5S"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvZ-fb-Dkk">
-                                <rect key="frame" x="65" y="384" width="190" height="43"/>
+                                <rect key="frame" x="65" y="381" width="190" height="62"/>
                                 <state key="normal" title="Sign Up" image="signup-button.png"/>
                                 <connections>
                                     <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EuV-ci-wc7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLF-Nn-OY3">
+                                <rect key="frame" x="65" y="273" width="190" height="62"/>
+                                <state key="normal" title="Sign In" image="instagram_login.png"/>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fe3-jV-C5S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -237,15 +237,37 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-Ym-IW2">
-                                <rect key="frame" x="20" y="297" width="280" height="30"/>
+                                <rect key="frame" x="20" y="388" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNC-RE-1qv">
-                                <rect key="frame" x="136" y="455" width="49" height="30"/>
+                                <rect key="frame" x="132" y="448" width="58" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitPost:" destination="NgE-ut-pJr" eventType="touchUpInside" id="fce-xQ-8bA"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nza-cL-qYD">
+                                <rect key="frame" x="121" y="316" width="181" height="31"/>
+                                <connections>
+                                    <action selector="intensityChanged:" destination="NgE-ut-pJr" eventType="valueChanged" id="p8y-gh-MDx"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lX5-GS-9CN">
+                                <rect key="frame" x="20" y="316" width="92" height="30"/>
+                                <state key="normal" title="Change Filter"/>
+                                <connections>
+                                    <action selector="changeFilter:" destination="NgE-ut-pJr" eventType="touchUpInside" id="gxG-9p-BW6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c4-PG-A9m">
+                                <rect key="frame" x="265" y="479" width="35" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePic:" destination="NgE-ut-pJr" eventType="touchUpInside" id="dzn-OB-sDE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -255,6 +277,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="captionTextField" destination="J0R-Ym-IW2" id="rHi-5Z-L4j"/>
+                        <outlet property="intensity" destination="nza-cL-qYD" id="dQy-Cy-VTs"/>
                         <outlet property="photesButton" destination="aX4-XE-ybt" id="nHq-AA-S8m"/>
                         <outlet property="picture" destination="6z6-s4-rOz" id="Mnb-Fj-t9f"/>
                         <outlet property="submitButton" destination="RNC-RE-1qv" id="1qS-Gt-xva"/>
